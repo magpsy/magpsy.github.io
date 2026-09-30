@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f6">
+  <meta name="description" content="Chih-Yu Maggie Jao is a graduate researcher in Social Psychology at National Taiwan University. Her interests include shared experience, computational social neuroscience, natural language processing, and social network analysis.">
+  <title>Chih-Yu Maggie Jao · Research</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172a45;
+      --body: #3b4858;
+      --muted: #677585;
+      --line: #dce2e7;
+      --paper: #f8f8f6;
+      --white: #fff;
+      --accent: #447b87;
+      --warm: #d5b9a2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--body); line-height: 1.65; }
+    a { color: var(--ink); text-underline-offset: .22em; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
+    .skip-link { position: absolute; top: -60px; left: 20px; z-index: 10; background: var(--white); padding: 10px 16px; }
+    .skip-link:focus { top: 16px; }
+    .wrap { width: min(1120px, calc(100% - 56px)); margin: auto; }
+    .site-header { border-bottom: 1px solid var(--line); }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { color: var(--ink); font-size: 16px; font-weight: 700; letter-spacing: -.025em; text-decoration: none; }
+    .top-nav { display: flex; flex-wrap: wrap; gap: 30px; }
+    .top-nav a { font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; }
+    .top-nav a:hover, .top-nav a:focus-visible { color: var(--ink); }
+    .hero { min-height: 600px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(290px, .8fr); align-items: center; gap: 60px; padding-block: 76px 90px; }
+    .eyebrow, .section-kicker { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { color: var(--ink); font-size: clamp(42px, 5vw, 68px); letter-spacing: -.052em; line-height: 1.08; margin: 18px 0 18px; }
+    .hero-lede { font-size: clamp(19px, 2.3vw, 25px); color: var(--ink); line-height: 1.42; max-width: 620px; margin-bottom: 16px; }
+    .hero-copy { font-size: 16px; max-width: 590px; margin-bottom: 29px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 9px 17px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); font-size: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px #172a4508; }
+    .button.primary { background: var(--ink); border-color: var(--ink); color: var(--white); }
+    .button.primary:hover { background: #294462; }
+    .hero-art { min-height: 340px; display: grid; place-items: center; }
+    .hero-art svg { display: block; width: min(100%, 425px); height: auto; }
+    section.content-section { border-top: 1px solid var(--line); padding-block: 70px 76px; scroll-margin-top: 28px; }
+    .section-heading { display: grid; grid-template-columns: 220px 1fr; gap: 32px; margin-bottom: 25px; }
+    .section-heading h2 { color: var(--ink); font-size: clamp(25px, 3vw, 34px); letter-spacing: -.035em; line-height: 1.2; margin: 0; }
+    .section-body { grid-column: 2; }
+    .section-body p { max-width: 730px; }
+    .section-body p:last-child { margin-bottom: 0; }
+    .education { list-style: none; padding: 0; margin: 27px 0 0; max-width: 730px; }
+    .education li { display: grid; grid-template-columns: 145px 1fr; gap: 16px; border-top: 1px solid var(--line); padding: 15px 0; }
+    .education li:last-child { border-bottom: 1px solid var(--line); }
+    .education time { color: var(--accent); font-size: 14px; font-weight: 700; }
+    .education strong { display: block; color: var(--ink); line-height: 1.4; }
+    .education span { color: var(--muted); font-size: 14px; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .research-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 25px 24px; }
+    .research-card .number { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+    .research-card h3 { color: var(--ink); font-size: 18px; line-height: 1.35; margin: 12px 0 10px; }
+    .research-card p { font-size: 14px; margin: 0; }
+    .works { list-style: none; padding: 0; margin: 0; }
+    .works li { display: grid; grid-template-columns: 80px 1fr; gap: 18px; border-top: 1px solid var(--line); padding: 20px 0; }
+    .works li:last-child { border-bottom: 1px solid var(--line); }
+    .year { color: var(--accent); font-size: 14px; font-weight: 800; }
+    .work-title { color: var(--ink); font-weight: 700; line-height: 1.4; }
+    .work-meta { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
+    .cv-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .site-footer { border-top: 1px solid var(--line); padding: 28px 0 36px; color: var(--muted); font-size: 13px; }
+    .site-footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 820px) {
+      .hero { min-height: 0; grid-template-columns: 1fr; gap: 16px; padding-block: 68px 64px; }
+      .hero-art { min-height: 210px; }
+      .hero-art svg { width: min(72%, 320px); }
+      .section-heading { grid-template-columns: 1fr; gap: 14px; }
+      .section-body { grid-column: 1; }
+      .research-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 34px, 1120px); }
+      .header-inner { min-height: 0; align-items: flex-start; flex-direction: column; padding-block: 18px; gap: 12px; }
+      .top-nav { gap: 17px; }
+      .hero { padding-block: 56px 58px; }
+      .hero-art { min-height: 170px; }
+      .hero-art svg { width: min(70%, 260px); }
+      section.content-section { padding-block: 50px 56px; }
+      .works li { grid-template-columns: 1fr; gap: 5px; }
+      .education li { grid-template-columns: 1fr; gap: 4px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top">Chih-Yu Maggie Jao</a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#work">Selected work</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap" id="top">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Graduate researcher · National Taiwan University</div>
+          <h1>Chih-Yu Maggie Jao</h1>
+          <p class="hero-lede">Studying how people connect through shared experience.</p>
+          <p class="hero-copy">I am an M.S. student in Social Psychology at National Taiwan University and a researcher at CHEN Lab. My work brings together behavioral experiments, neuroimaging, and computational approaches to social interaction.</p>
+          <div class="actions">
+            <a class="button primary" href="#about">About me</a>
+            <a class="button" href="https://magpsy.github.io/CV-public/?view=full" target="_blank" rel="noopener noreferrer">Full CV ↗</a>
+            <a class="button" href="mailto:r14227103@ntu.edu.tw">Email ↗</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <circle cx="210" cy="210" r="168" fill="#eef2f1"/>
+            <circle cx="210" cy="210" r="126" fill="none" stroke="#dce5e3" stroke-width="1.5"/>
+            <g fill="none" stroke="#9db8b7" stroke-width="1.6" stroke-linecap="round">
+              <path d="M97 142 174 113 255 151 329 112M97 142 115 246 203 213 255 151M115 246 187 319 203 213 315 283M203 213 329 112 315 283 187 319M174 113 203 213M255 151 315 283"/>
+            </g>
+            <g fill="#f8f8f6" stroke="#172a45" stroke-width="2.4">
+              <circle cx="97" cy="142" r="16"/><circle cx="174" cy="113" r="12"/>
+              <circle cx="255" cy="151" r="15"/><circle cx="329" cy="112" r="11"/>
+              <circle cx="115" cy="246" r="12"/><circle cx="203" cy="213" r="23"/>
+              <circle cx="315" cy="283" r="16"/><circle cx="187" cy="319" r="11"/>
+            </g>
+            <g fill="#447b87"><circle cx="97" cy="142" r="5"/><circle cx="255" cy="151" r="5"/><circle cx="203" cy="213" r="10"/><circle cx="315" cy="283" r="5"/></g>
+            <g fill="#d5b9a2"><circle cx="174" cy="113" r="4"/><circle cx="329" cy="112" r="4"/><circle cx="115" cy="246" r="4"/><circle cx="187" cy="319" r="4"/></g>
+          </svg>
+        </div>
+      </div>
+      <section class="content-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <div class="section-kicker">01 / Profile</div>
+          <div class="section-body">
+            <h2 id="about-title">About</h2>
+            <p>I study shared experience and social alignment in the <a href="https://www.chenlaboratory.com/" target="_blank" rel="noopener noreferrer">CHEN Lab</a>, under the supervision of Pin-Hao Andy Chen. I joined the lab as an undergraduate research assistant in 2023 and became a graduate researcher in September 2025.</p>
+            <ul class="education" aria-label="Education and academic award">
+              <li><time datetime="2025-09">2025–present</time><div><strong>M.S. program in Psychology, Social Psychology</strong><span>National Taiwan University · Expected completion: July 2028 · Advisor: Pin-Hao Andy Chen</span></div></li>
+              <li><time datetime="2021">2021–2025</time><div><strong>B.S. in Life Science</strong><span>National Taiwan University · GPA: 3.73 / 4.3</span></div></li>
+              <li><time datetime="2025">Spring 2025</time><div><strong>Academic Excellence Award (Life Science)</strong><span>National Taiwan University</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="content-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <div class="section-kicker">02 / Questions & methods</div>
+          <div class="section-body"><h2 id="research-title">Research</h2><p>My interests span computational social neuroscience, natural language processing, shared experience, and social network analysis.</p></div>
+        </div>
+        <div class="research-grid">
+          <article class="research-card"><div class="number">01</div><h3>Shared experience</h3><p>Designing behavioral and virtual reality studies to examine mental alignment during shared experiences.</p></article>
+          <article class="research-card"><div class="number">02</div><h3>Social alignment</h3><p>Using behavioral and neuroimaging experiments to study how social interactions shape alignment.</p></article>
+          <article class="research-card"><div class="number">03</div><h3>Humans & language models</h3><p>Exploring human–LLM alignment in the context of social interaction.</p></article>
+        </div>
+      </section>
+      <section class="content-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div class="section-kicker">03 / Presentations</div>
+          <div class="section-body"><h2 id="work-title">Selected work</h2><p>Conference and research presentations selected from my CV. My name appears in the author order shown there.</p></div>
+        </div>
+        <ol class="works">
+          <li><span class="year">2026</span><div><div class="work-title">Simultaneous collection of multimodal measures reveals unique facets of affective experience</div><p class="work-meta">Chen, Chou, Wang & Jao · Association for Psychological Science Annual Convention · Barcelona, Spain</p></div></li>
+          <li><span class="year">2024</span><div><div class="work-title">Investigating the self-monitoring effect on brain representations of food cues with an ISRSA approach</div><p class="work-meta">Jao, Chou & Chen · Symposium presentation, Taiwanese Psychological Association Annual Conference · Taipei, Taiwan</p></div></li>
+          <li><span class="year">2023</span><div><div class="work-title">Conversations between friends and strangers</div><p class="work-meta">Jao, Chou & Chen · NTU Neurobiology and Cognitive Science Center Summer Internship Conference · Taipei, Taiwan</p></div></li>
+        </ol>
+      </section>
+      <section class="content-section" id="cv" aria-labelledby="cv-title">
+        <div class="section-heading">
+          <div class="section-kicker">04 / Curriculum vitae</div>
+          <div class="section-body"><h2 id="cv-title">CV</h2><p>The full academic CV includes research experience, presentations, education, coursework, and service. A one-page version is also available.</p><div class="cv-links"><a class="button primary" href="https://magpsy.github.io/CV-public/?view=full" target="_blank" rel="noopener noreferrer">View full CV ↗</a><a class="button" href="https://magpsy.github.io/CV-public/?view=onepage" target="_blank" rel="noopener noreferrer">View one-page CV ↗</a></div></div>
+        </div>
+      </section>
+      <section class="content-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <div class="section-kicker">05 / Get in touch</div>
+          <div class="section-body"><h2 id="contact-title">Contact</h2><p>For research-related inquiries, please reach me at my NTU email.</p><div class="contact-links"><a href="mailto:r14227103@ntu.edu.tw">r14227103@ntu.edu.tw</a><a href="https://github.com/magpsy" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Chih-Yu Maggie Jao</span><span>National Taiwan University · Taipei, Taiwan</span></div></footer>
+</body>
+</html>
