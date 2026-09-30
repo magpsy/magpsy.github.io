@@ -1,6 +1,6 @@
 # Chih-Yu Maggie Jao — personal website
 
-This is a standalone, dependency-free GitHub Pages homepage. The public source contains only `index.html`; the LaTeX CV source remains in the private `magpsy/CV` repository. The published full and one-page PDF views are linked from `magpsy/CV-public`.
+This is a standalone, dependency-free GitHub Pages homepage. The website itself is a single `index.html`; the LaTeX CV source remains in the private `magpsy/CV` repository. The published full and one-page PDF views are linked from `magpsy/CV-public`.
 
 ## 更新方式
 
