@@ -54,10 +54,15 @@
     .section-body { grid-column: 2; }
     .section-body p { max-width: 730px; }
     .section-body p:last-child { margin-bottom: 0; }
-    .education { list-style: none; padding: 0; margin: 27px 0 0; max-width: 730px; }
-    .education li { display: grid; grid-template-columns: 145px 1fr; gap: 16px; border-top: 1px solid var(--line); padding: 15px 0; }
-    .education li:last-child { border-bottom: 1px solid var(--line); }
-    .education time { color: var(--accent); font-size: 14px; font-weight: 700; }
+    .about-block { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; padding: 30px 0; border-top: 1px solid var(--line); }
+    .about-block h3 { color: var(--ink); font-size: 22px; line-height: 1.3; letter-spacing: -.025em; margin: 0; }
+    .about-block p { max-width: 730px; }
+    .about-block .education { margin: 0; }
+    .education, .works { list-style: none; max-width: 730px; padding: 0 0 0 27px; margin: 0 0 0 7px; border-left: 2px solid var(--line); }
+    .education li, .works li { position: relative; display: block; padding: 0 0 32px; }
+    .education li:last-child, .works li:last-child { padding-bottom: 0; }
+    .education li::before, .works li::before { content: ""; position: absolute; left: -35px; top: 5px; width: 12px; height: 12px; border: 2px solid var(--accent); border-radius: 50%; background: var(--paper); }
+    .education time { display: block; color: var(--accent); font-size: 14px; font-weight: 700; margin-bottom: 3px; }
     .education strong { display: block; color: var(--ink); line-height: 1.4; }
     .education span { color: var(--muted); font-size: 14px; }
     .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -65,10 +70,7 @@
     .research-card .number { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
     .research-card h3 { color: var(--ink); font-size: 18px; line-height: 1.35; margin: 12px 0 10px; }
     .research-card p { font-size: 14px; margin: 0; }
-    .works { list-style: none; padding: 0; margin: 0; }
-    .works li { display: grid; grid-template-columns: 80px 1fr; gap: 18px; border-top: 1px solid var(--line); padding: 20px 0; }
-    .works li:last-child { border-bottom: 1px solid var(--line); }
-    .year { color: var(--accent); font-size: 14px; font-weight: 800; }
+    .year { display: block; color: var(--accent); font-size: 14px; font-weight: 800; margin-bottom: 3px; }
     .work-title { color: var(--ink); font-weight: 700; line-height: 1.4; }
     .work-meta { color: var(--muted); font-size: 14px; margin: 6px 0 0; }
     .cv-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
@@ -81,6 +83,7 @@
       .hero-art svg { width: min(72%, 320px); }
       .section-heading { grid-template-columns: 1fr; gap: 14px; }
       .section-body { grid-column: 1; }
+      .about-block { grid-template-columns: 1fr; gap: 18px; }
       .research-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 560px) {
@@ -91,8 +94,6 @@
       .hero-art { min-height: 170px; }
       .hero-art svg { width: min(70%, 260px); }
       section.content-section { padding-block: 50px 56px; }
-      .works li { grid-template-columns: 1fr; gap: 5px; }
-      .education li { grid-template-columns: 1fr; gap: 4px; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
@@ -103,9 +104,7 @@
     <div class="wrap header-inner">
       <a class="wordmark" href="#top">Chih-Yu Maggie Jao</a>
       <nav class="top-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#work">Selected work</a>
+        <a href="#about">About me</a>
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -118,7 +117,7 @@
           <div class="eyebrow">Graduate researcher · National Taiwan University</div>
           <h1>Chih-Yu Maggie Jao</h1>
           <p class="hero-lede">Studying how people connect through shared experience.</p>
-          <p class="hero-copy">I am an M.S. student in Social Psychology at National Taiwan University and a researcher at CHEN Lab. My work brings together behavioral experiments, neuroimaging, and computational approaches to social interaction.</p>
+          <p class="hero-copy">I am an M.S. student in Social Psychology at National Taiwan University. My work brings together behavioral experiments, neuroimaging, and computational approaches to social interaction.</p>
           <div class="actions">
             <a class="button primary" href="#about">About me</a>
             <a class="button" href="https://magpsy.github.io/CV-public/?view=full" target="_blank" rel="noopener noreferrer">Full CV ↗</a>
@@ -146,48 +145,44 @@
       <section class="content-section" id="about" aria-labelledby="about-title">
         <div class="section-heading">
           <div class="section-kicker">01 / Profile</div>
-          <div class="section-body">
-            <h2 id="about-title">About</h2>
-            <p>I study shared experience and social alignment in the <a href="https://www.chenlaboratory.com/" target="_blank" rel="noopener noreferrer">CHEN Lab</a>, under the supervision of Pin-Hao Andy Chen. I joined the lab as an undergraduate research assistant in 2023 and became a graduate researcher in September 2025.</p>
-            <ul class="education" aria-label="Education and academic award">
-              <li><time datetime="2025-09">2025–present</time><div><strong>M.S. program in Psychology, Social Psychology</strong><span>National Taiwan University · Expected completion: July 2028 · Advisor: Pin-Hao Andy Chen</span></div></li>
-              <li><time datetime="2021">2021–2025</time><div><strong>B.S. in Life Science</strong><span>National Taiwan University · GPA: 3.73 / 4.3</span></div></li>
-              <li><time datetime="2025">Spring 2025</time><div><strong>Academic Excellence Award (Life Science)</strong><span>National Taiwan University</span></div></li>
-            </ul>
+          <div class="section-body"><h2 id="about-title">About me</h2></div>
+        </div>
+        <div class="about-block" id="education">
+          <h3>Education</h3>
+          <ul class="education" aria-label="Education timeline">
+            <li><time datetime="2025-09">2025–present</time><div><strong>M.S. program in Psychology, Social Psychology</strong><span>National Taiwan University · Expected completion: July 2028 · Advisor: Pin-Hao Andy Chen</span></div></li>
+            <li><time datetime="2021">2021–2025</time><div><strong>B.S. in Life Science</strong><span>National Taiwan University · GPA: 3.73 / 4.3</span></div></li>
+          </ul>
+        </div>
+        <div class="about-block" id="research">
+          <h3>Research</h3>
+          <div>
+            <p>My interests span computational social neuroscience, natural language processing, shared experience, and social network analysis.</p>
+            <div class="research-grid">
+              <article class="research-card"><div class="number">01</div><h3>Shared experience</h3><p>Designing behavioral and virtual reality studies to examine mental alignment during shared experiences.</p></article>
+              <article class="research-card"><div class="number">02</div><h3>Social alignment</h3><p>Using behavioral and neuroimaging experiments to study how social interactions shape alignment.</p></article>
+              <article class="research-card"><div class="number">03</div><h3>Humans & language models</h3><p>Exploring human–LLM alignment in the context of social interaction.</p></article>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="content-section" id="research" aria-labelledby="research-title">
-        <div class="section-heading">
-          <div class="section-kicker">02 / Questions & methods</div>
-          <div class="section-body"><h2 id="research-title">Research</h2><p>My interests span computational social neuroscience, natural language processing, shared experience, and social network analysis.</p></div>
+        <div class="about-block" id="work">
+          <h3>Selected work</h3>
+          <ol class="works" aria-label="Selected research presentations">
+            <li><span class="year">2026</span><div><div class="work-title">Simultaneous collection of multimodal measures reveals unique facets of affective experience</div><p class="work-meta">Chen, Chou, Wang & Jao · Association for Psychological Science Annual Convention · Barcelona, Spain</p></div></li>
+            <li><span class="year">2024</span><div><div class="work-title">Investigating the self-monitoring effect on brain representations of food cues with an ISRSA approach</div><p class="work-meta">Jao, Chou & Chen · Symposium presentation, Taiwanese Psychological Association Annual Conference · Taipei, Taiwan</p></div></li>
+            <li><span class="year">2023</span><div><div class="work-title">Conversations between friends and strangers</div><p class="work-meta">Jao, Chou & Chen · NTU Neurobiology and Cognitive Science Center Summer Internship Conference · Taipei, Taiwan</p></div></li>
+          </ol>
         </div>
-        <div class="research-grid">
-          <article class="research-card"><div class="number">01</div><h3>Shared experience</h3><p>Designing behavioral and virtual reality studies to examine mental alignment during shared experiences.</p></article>
-          <article class="research-card"><div class="number">02</div><h3>Social alignment</h3><p>Using behavioral and neuroimaging experiments to study how social interactions shape alignment.</p></article>
-          <article class="research-card"><div class="number">03</div><h3>Humans & language models</h3><p>Exploring human–LLM alignment in the context of social interaction.</p></article>
-        </div>
-      </section>
-      <section class="content-section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <div class="section-kicker">03 / Presentations</div>
-          <div class="section-body"><h2 id="work-title">Selected work</h2><p>Conference and research presentations selected from my CV. My name appears in the author order shown there.</p></div>
-        </div>
-        <ol class="works">
-          <li><span class="year">2026</span><div><div class="work-title">Simultaneous collection of multimodal measures reveals unique facets of affective experience</div><p class="work-meta">Chen, Chou, Wang & Jao · Association for Psychological Science Annual Convention · Barcelona, Spain</p></div></li>
-          <li><span class="year">2024</span><div><div class="work-title">Investigating the self-monitoring effect on brain representations of food cues with an ISRSA approach</div><p class="work-meta">Jao, Chou & Chen · Symposium presentation, Taiwanese Psychological Association Annual Conference · Taipei, Taiwan</p></div></li>
-          <li><span class="year">2023</span><div><div class="work-title">Conversations between friends and strangers</div><p class="work-meta">Jao, Chou & Chen · NTU Neurobiology and Cognitive Science Center Summer Internship Conference · Taipei, Taiwan</p></div></li>
-        </ol>
       </section>
       <section class="content-section" id="cv" aria-labelledby="cv-title">
         <div class="section-heading">
-          <div class="section-kicker">04 / Curriculum vitae</div>
-          <div class="section-body"><h2 id="cv-title">CV</h2><p>The full academic CV includes research experience, presentations, education, coursework, and service. A one-page version is also available.</p><div class="cv-links"><a class="button primary" href="https://magpsy.github.io/CV-public/?view=full" target="_blank" rel="noopener noreferrer">View full CV ↗</a><a class="button" href="https://magpsy.github.io/CV-public/?view=onepage" target="_blank" rel="noopener noreferrer">View one-page CV ↗</a></div></div>
+          <div class="section-kicker">02 / Curriculum vitae</div>
+          <div class="section-body"><h2 id="cv-title">CV</h2><p>The full academic CV includes research experience, presentations, education, coursework, and service.</p><div class="cv-links"><a class="button primary" href="https://magpsy.github.io/CV-public/?view=full" target="_blank" rel="noopener noreferrer">View full CV ↗</a></div></div>
         </div>
       </section>
       <section class="content-section" id="contact" aria-labelledby="contact-title">
         <div class="section-heading">
-          <div class="section-kicker">05 / Get in touch</div>
+          <div class="section-kicker">03 / Get in touch</div>
           <div class="section-body"><h2 id="contact-title">Contact</h2><p>For research-related inquiries, please reach me at my NTU email.</p><div class="contact-links"><a href="mailto:r14227103@ntu.edu.tw">r14227103@ntu.edu.tw</a><a href="https://github.com/magpsy" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
         </div>
       </section>
