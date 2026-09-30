@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f6">
+  <meta name="description" content="Chih-Yu Maggie Jao is an M.S. student in Social Psychology at National Taiwan University. Her research interests are computational social neuroscience, natural language processing, and social alignment.">
+  <title>B · Field Notes · Chih-Yu Maggie Jao</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172a45;
+      --body: #3b4858;
+      --muted: #677585;
+      --line: #dce2e7;
+      --paper: #f8f8f6;
+      --white: #fff;
+      --accent: #447b87;
+      --warm: #d5b9a2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--body); line-height: 1.65; }
+    a { color: var(--ink); text-underline-offset: .22em; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 3px; }
+    .skip-link { position: absolute; top: -60px; left: 20px; z-index: 10; background: var(--white); padding: 10px 16px; }
+    .skip-link:focus { top: 16px; }
+    .wrap { width: min(1120px, calc(100% - 56px)); margin: auto; }
+    .site-header { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid var(--line); background: var(--paper); }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; font-size: 16px; font-weight: 700; letter-spacing: -.025em; text-decoration: none; cursor: pointer; }
+    .top-nav { display: flex; flex-wrap: wrap; gap: 30px; }
+    .top-nav button { padding: 0; border: 0; background: none; font: inherit; font-size: 14px; font-weight: 600; color: var(--muted); cursor: pointer; }
+    .top-nav button:hover, .top-nav button[aria-pressed="true"] { color: var(--ink); }
+    .hero { min-height: 600px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(290px, .8fr); align-items: center; gap: 60px; padding-block: 76px 90px; }
+    .eyebrow, .subsection-title { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { color: var(--ink); font-size: clamp(42px, 5vw, 68px); letter-spacing: -.052em; line-height: 1.08; margin: 18px 0 18px; }
+    .hero-lede { font-size: clamp(16px, 1.7vw, 19px); color: var(--body); line-height: 1.6; max-width: 620px; margin-bottom: 29px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 9px 17px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); font: inherit; font-size: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px #172a4508; cursor: pointer; }
+    .button.primary { background: var(--ink); border-color: var(--ink); color: var(--white); }
+    .button.primary:hover { background: #294462; }
+    .copy-status { align-self: center; color: var(--muted); font-size: 13px; }
+    .hero-art { min-height: 340px; display: grid; place-items: center; }
+    .hero-art svg { display: block; width: min(100%, 425px); height: auto; }
+    section.content-section { border-top: 1px solid var(--line); padding-block: 70px 76px; scroll-margin-top: 28px; }
+    .content-section > h2 { color: var(--ink); font-size: clamp(28px, 3vw, 36px); letter-spacing: -.035em; line-height: 1.2; margin: 0 0 42px; }
+    .subsection { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; align-items: start; }
+    .subsection + .subsection { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 48px; }
+    .subsection-title { margin: 4px 0 0; line-height: 1.45; }
+    .subsection-content { min-width: 0; padding-top: 12px; }
+    .timeline { list-style: none; max-width: 730px; padding: 0 0 0 27px; margin: 0 0 0 7px; border-left: 2px solid var(--line); }
+    .timeline li { position: relative; display: block; padding: 0 0 32px; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before { content: ""; position: absolute; left: -35px; top: 5px; width: 12px; height: 12px; border: 2px solid var(--accent); border-radius: 50%; background: var(--paper); }
+    .timeline time { display: block; color: var(--accent); font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .timeline strong { display: block; color: var(--ink); line-height: 1.4; }
+    .timeline span { display: block; color: var(--muted); font-size: 14px; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .research-card { min-height: 220px; background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 25px 24px; }
+    .research-card h4 { min-height: 2.7em; color: var(--ink); font-size: 18px; line-height: 1.35; margin: 0 0 10px; }
+    .research-card p { font-size: 14px; margin: 0; }
+    .publications { display: grid; gap: 16px; list-style: none; padding: 0; margin: 0; }
+    .publication-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+    .publication-year { display: block; color: var(--accent); font-size: 13px; font-weight: 800; margin-bottom: 7px; }
+    .publication-title { color: var(--ink); font-size: 16px; font-weight: 700; line-height: 1.4; margin: 0 0 7px; }
+    .publication-meta { color: var(--muted); font-size: 14px; margin: 0; }
+    .site-footer { border-top: 1px solid var(--line); padding: 28px 0 36px; color: var(--muted); font-size: 13px; }
+    .site-footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 820px) {
+      .hero { min-height: 0; grid-template-columns: 1fr; gap: 16px; padding-block: 68px 64px; }
+      .hero-art { min-height: 210px; }
+      .hero-art svg { width: min(72%, 320px); }
+      .subsection { grid-template-columns: 1fr; gap: 16px; }
+      .subsection-content { padding-top: 0; }
+      .research-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 34px, 1120px); }
+      .header-inner { min-height: 0; align-items: flex-start; flex-direction: column; padding-block: 18px; gap: 12px; }
+      .top-nav { gap: 17px; }
+      .hero { padding-block: 56px 58px; }
+      .hero-art { min-height: 170px; }
+      .hero-art svg { width: min(70%, 260px); }
+      section.content-section { padding-block: 50px 56px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  
+      :root { --paper:#eaf0f0; --white:#f8fbfa; --accent:#60a1aa; --line:#bacacc; }
+      body { font-family:Arial,"Segoe UI",sans-serif; }
+      .site-header { position:relative; z-index:3; background:#132b47; border-bottom:1px solid #436279; }
+      .header-inner { min-height:65px; }
+      .wordmark,.top-nav button { color:#e8f0f0; }
+      .top-nav button:hover,.top-nav button[aria-pressed="true"] { color:#8ecad0; }
+      .top-nav { gap:0; }
+      .top-nav button { min-width:95px; border-left:1px solid #436279; padding:20px 14px; text-align:center; text-transform:uppercase; letter-spacing:.08em; font-size:11px; }
+      .top-nav button:last-child { border-right:1px solid #436279; }
+      .wrap { width:min(1180px,calc(100% - 68px)); }
+      #top { width:100%; }
+      .hero { position:relative; min-height:615px; grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr); gap:55px; padding:90px max(34px,calc((100vw - 1180px)/2)) 108px; background:#132b47; color:#e9f0f0; overflow:hidden; }
+      .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,transparent 49.8%,#3c607424 50%,transparent 50.2%),linear-gradient(0deg,transparent 49.8%,#3c607424 50%,transparent 50.2%); background-size:100px 100px; pointer-events:none; }
+      .hero > * { position:relative; }
+      .eyebrow { color:#9fcdd0; font-size:11px; letter-spacing:.19em; }
+      h1 { color:#f3f5f1; font-size:clamp(44px,5.2vw,74px); max-width:710px; line-height:1.02; letter-spacing:-.06em; margin:24px 0; }
+      .hero-lede { color:#d4dfe1; max-width:620px; font-size:17px; }
+      .actions { gap:8px; }
+      .button,.button.primary { min-height:46px; border:1px solid #9bb5c1; border-radius:2px; background:transparent; color:#f2f6f6; box-shadow:none; font-size:12px; letter-spacing:.07em; text-transform:uppercase; }
+      .button.primary,.button:hover,.button.primary:hover { background:#b4d0cd; border-color:#b4d0cd; color:#132b47; }
+      .copy-status { color:#c9dcdd; }
+      .hero-art { min-height:370px; align-items:stretch; }
+      .art-file { width:100%; min-height:370px; padding:26px 28px; border:1px solid #8badb1; display:flex; flex-direction:column; justify-content:space-between; background:#183550cc; box-shadow:14px 14px 0 #40677955; transform:rotate(2deg); }
+      .art-file span,.art-file small { font-size:11px; font-weight:700; letter-spacing:.17em; color:#afd1d0; }
+      .art-file strong { font-size:clamp(29px,3.2vw,47px); line-height:1.09; letter-spacing:-.05em; font-weight:500; color:#f4f5ee; }
+      section.content-section { width:min(1180px,calc(100% - 68px)); margin:auto; border:0; padding-block:80px 95px; }
+      .content-section > h2 { border-bottom:3px solid var(--ink); padding-bottom:18px; font-size:clamp(30px,3.3vw,42px); text-transform:uppercase; letter-spacing:-.045em; }
+      .subsection { grid-template-columns:110px minmax(0,1fr); gap:32px; }
+      .subsection + .subsection { border-top:1px solid var(--line); }
+      .subsection-title { font-size:11px; line-height:1.5; color:#376b78; }
+      .timeline { border-color:#6a929a; }
+      .timeline li::before { background:var(--paper); border-color:#376b78; }
+      .timeline time,.publication-year { color:#376b78; }
+      .research-card,.publication-card { border:1px solid #aabfc2; border-radius:2px; background:#f8fbfa; box-shadow:5px 5px 0 #c6d6d6; }
+      .research-card { min-height:226px; }
+      .research-card h4 { min-height:2.7em; }
+      .site-footer { background:#132b47; border:0; color:#d4dfe1; }
+      @media(max-width:820px) { .hero{grid-template-columns:1fr;gap:25px}.hero-art{display:none}.subsection{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr} }
+      @media(max-width:560px) { .wrap,section.content-section{width:calc(100% - 34px)}.header-inner{align-items:flex-start;flex-direction:column;gap:12px;padding:16px 0}.top-nav button{padding:0 16px 0 0;border:0!important;min-width:0}.hero{padding:70px 17px 75px}.button{flex:1 1 40%} }
+        
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <button class="wordmark" type="button" data-view="home">Chih-Yu Maggie Jao</button>
+      <nav class="top-nav" aria-label="Main navigation">
+        <button type="button" data-view="home" aria-pressed="true">Home</button>
+        <button type="button" data-view="about" aria-pressed="false">About me</button>
+        <button type="button" data-view="research" aria-pressed="false">Research</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap" id="top">
+      <div class="hero" id="home-panel">
+        <div>
+          <div class="eyebrow">Graduate researcher · National Taiwan University</div>
+          <h1>Chih-Yu Maggie Jao</h1>
+          <p class="hero-lede">I am an M.S. student in Social Psychology at National Taiwan University. My work brings together behavioral experiments and computational approaches to social interaction.</p>
+          <div class="actions">
+            <button class="button primary" type="button" data-view="about">About me</button>
+            <button class="button" type="button" data-view="research">Research</button>
+            <a class="button" href="https://magpsy.github.io/CV-public/CV-OnePage.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+            <button class="button" id="copy-email" type="button">Copy email</button>
+            <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="art-file" aria-hidden="true"><span>RESEARCH FILE / 2026</span><strong>Human<br>connection<br>&amp; alignment.</strong><small>NTU · SOCIAL PSYCHOLOGY</small></div></div>
+      </div>
+      <section class="content-section" id="about" aria-labelledby="about-title" hidden>
+        <h2 id="about-title">About me</h2>
+        <section class="subsection" aria-labelledby="profile-title">
+          <h3 class="subsection-title" id="profile-title">01 / Profile</h3>
+          <div class="subsection-content">
+            <ul class="timeline" aria-label="Education timeline">
+              <li><time datetime="2028">Expected 2028</time><div><strong>M.S. program in Psychology, Social Psychology</strong><span>National Taiwan University</span></div></li>
+              <li><time datetime="2025">2025</time><div><strong>B.S. in Life Science</strong><span>National Taiwan University</span></div></li>
+            </ul>
+          </div>
+        </section>
+        <section class="subsection" aria-labelledby="awards-title">
+          <h3 class="subsection-title" id="awards-title">02 / Awards</h3>
+          <div class="subsection-content">
+            <ul class="timeline" aria-label="Awards and research grants timeline">
+              <li><time datetime="2025">Spring 2025</time><div><strong>Academic Excellence Award (Life Science)</strong><span>National Taiwan University · Second semester of senior year</span></div></li>
+              <li><time datetime="2024">2024</time><div><strong>NSTC Undergraduate Research Grant</strong><span>National Science and Technology Council, Taiwan</span><span>Project on differences in perceived connection between observers and participants in social interactions.</span></div></li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <section class="content-section" id="research" aria-labelledby="research-title" hidden>
+        <h2 id="research-title">Research</h2>
+        <section class="subsection" aria-labelledby="interests-title">
+          <h3 class="subsection-title" id="interests-title">01 / Research interests</h3>
+          <div class="subsection-content research-grid">
+            <article class="research-card"><h4>Computational social neuroscience</h4><p>Designing behavioral and virtual reality studies to examine mental alignment during shared experiences.</p></article>
+            <article class="research-card"><h4>Social alignment</h4><p>Using behavioral studies to examine how social interactions shape alignment.</p></article>
+            <article class="research-card"><h4>Natural language processing</h4><p>Exploring human–LLM alignment in the context of social interaction.</p></article>
+          </div>
+        </section>
+        <section class="subsection" aria-labelledby="publications-title">
+          <h3 class="subsection-title" id="publications-title">02 / Publications &amp; Presentations</h3>
+          <ol class="subsection-content publications" aria-label="Conference contributions">
+            <li class="publication-card"><time class="publication-year" datetime="2026">2026</time><h4 class="publication-title">Simultaneous collection of multimodal measures reveals unique facets of affective experience</h4><p class="publication-meta">Chen, P.-H. A., Chou, F.-C. B., Wang, T.-R. H., &amp; Jao, C.-Y. M. · Association for Psychological Science Annual Convention · Barcelona, Spain</p></li>
+            <li class="publication-card"><time class="publication-year" datetime="2025">2025</time><h4 class="publication-title">Using heart rate dynamics to examine emotional adaptation during prolonged naturalistic video watching</h4><p class="publication-meta">Chen, P.-F. J., Chou, F.-C. B., Jao, C.-Y. M., Wang, T.-R. H., Wang, S.-C. T., &amp; Chen, P.-H. A. · Oral presentation, Taiwanese Psychological Association Annual Conference · Tainan, Taiwan</p></li>
+            <li class="publication-card"><time class="publication-year" datetime="2024">2024</time><h4 class="publication-title">Investigating the self-monitoring effect on brain representations of food cues with an ISRSA approach</h4><p class="publication-meta">Jao, C.-Y. M., Chou, F.-C. B., &amp; Chen, P.-H. A. · Symposium presentation, Taiwanese Psychological Association Annual Conference · Taipei, Taiwan</p></li>
+            <li class="publication-card"><time class="publication-year" datetime="2024">2024</time><h4 class="publication-title">Unveiling affective experience during naturalistic viewing through spontaneous facial dynamics</h4><p class="publication-meta">Chen, Y.-C. C., Chou, F.-C. B., Jao, C.-Y. M., Chang, C.-Y. E., Liu, Y.-W. J., Chiu, T.-A. P., &amp; Chen, P.-H. A. · Social &amp; Affective Neuroscience Society Annual Conference · Toronto, Canada</p></li>
+            <li class="publication-card"><time class="publication-year" datetime="2023">2023</time><h4 class="publication-title">Conversations between friends and strangers</h4><p class="publication-meta">Jao, C.-Y. M., Chou, F.-C. B., &amp; Chen, P.-H. A. · NTU Neurobiology and Cognitive Science Center Summer Internship Conference · Taipei, Taiwan</p></li>
+          </ol>
+        </section>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap"><span>© 2026 Chih-Yu Maggie Jao</span><span>National Taiwan University · Taipei, Taiwan</span></div></footer>
+  <script>
+    const views = {
+      home: document.getElementById('home-panel'),
+      about: document.getElementById('about'),
+      research: document.getElementById('research')
+    };
+    const viewButtons = document.querySelectorAll('[data-view]');
+
+    function showView(view, updateHistory = true) {
+      if (!views[view]) view = 'home';
+      for (const [name, panel] of Object.entries(views)) panel.hidden = name !== view;
+      for (const button of viewButtons) {
+        const active = button.dataset.view === view;
+        button.setAttribute('aria-pressed', String(active));
+        if (button.classList.contains('button')) button.classList.toggle('primary', active);
+      }
+      if (updateHistory) {
+        const target = view === 'home' ? location.pathname + location.search : `#${view}`;
+        history.pushState({ view }, '', target);
+      }
+      window.scrollTo(0, 0);
+    }
+
+    for (const button of viewButtons) {
+      button.addEventListener('click', () => showView(button.dataset.view));
+    }
+    window.addEventListener('popstate', () => showView(location.hash.slice(1), false));
+    showView(location.hash.slice(1), false);
+
+    const copyButton = document.getElementById('copy-email');
+    const copyStatus = document.getElementById('copy-status');
+    const emailAddress = 'r14227103@ntu.edu.tw';
+
+    copyButton.addEventListener('click', async () => {
+      let copied = false;
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
+        await navigator.clipboard.writeText(emailAddress);
+        copied = true;
+      } catch {
+        const field = document.createElement('textarea');
+        field.value = emailAddress;
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        document.body.append(field);
+        field.select();
+        copied = document.execCommand('copy');
+        field.remove();
+      }
+      copyStatus.textContent = copied ? `Copied ${emailAddress}` : `Email: ${emailAddress}`;
+    });
+  </script>
+</body>
+</html>
