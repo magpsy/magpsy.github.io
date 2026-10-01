@@ -20,5 +20,6 @@ CV 閱讀區顯示 `magpsy/CV-public` 的一頁版 CV PNG 預覽，保留 PDF �
 本站沒有外部前端套件或追蹤程式。學術內容以本人確認的 CV 與文字為準。
 
 
-個人照：首頁採左側圓形柔邊、右側姓名；About me 採直式圓角。圖片使用 portrait-clean.png（移除背景白色大衣路人的版本），請與 index.html 一起部署。
+個人照：首頁採左側姓名、右側圓形柔邊；About me 採左側簡介、右側直式圓角，手機版亦將照片靠右排列。圖片使用 portrait-clean.png（移除背景白色大衣路人的版本），請與 index.html 一起部署。
+
 
