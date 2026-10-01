@@ -5,7 +5,7 @@
 ## 內容與互動
 
 - Home、About me 與 Research 在同一頁切換，支援瀏覽器上一頁。
-- 首頁保留個人介紹、CV 與 Copy email，右側藏藍面板可切換三個研究主題。
+- 首頁保留姓名、身分標示、導覽按鈕、CV 與 Copy email，右側藏藍面板可切換三個研究主題。完整自我介紹放在 About me 的 Profile 開頭，位於學歷時間軸之前。
 - Computational social neuroscience 的說明為：Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences.（透過行為與腦造影研究，探討共享經驗中的心智對齊。）此說明同步放在首頁互動面板與 Research 卡片。
 - About me 包含學歷時間軸及兩項獎項／研究補助。
 - Research 保留等高主題卡片與五筆研討會成果，可按年份篩選並展開完整引用。
