@@ -234,6 +234,23 @@
       .cv-preview { display:block; width:100%; max-width:980px; height:auto; margin:0 auto; border:1px solid var(--line); background:#fff; }
       .cv-preview[hidden] { display:none; }
       @media(max-width:560px) { .cv-toolbar{gap:12px}.cv-toolbar h2{font-size:28px} }
+  
+      .portrait { margin:0; overflow:hidden; background:#e5edee; border:0; box-shadow:0 8px 26px #172a4510; }
+      .portrait img { display:block; width:100%; height:100%; object-fit:cover; object-position:56% 52%; transform:scale(1.65); transform-origin:56% 52%; }
+      .home-identity { display:flex; align-items:center; gap:26px; }
+      .home-identity .portrait { width:164px; height:164px; flex-shrink:0; border-radius:50%; -webkit-mask-image:radial-gradient(circle,black 66%,transparent 72%); mask-image:radial-gradient(circle,black 66%,transparent 72%); }
+      .home-identity .portrait img { transform:scale(2.05); }
+      .identity-copy { min-width:0; }
+      .hero .identity-copy h1 { font-size:clamp(32px,3.5vw,45px); margin:0 0 21px; line-height:1.1; letter-spacing:-.04em; }
+      .home-identity .eyebrow { font-size:9px; line-height:1.8; letter-spacing:.09em; }
+      .hero .actions { margin-top:35px; }
+      .profile-layout { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:36px; align-items:start; }
+      .profile-layout .portrait { width:220px; height:300px; border-radius:26px; }
+      .profile-layout .portrait img { -webkit-mask-image:linear-gradient(to bottom,transparent,black 2%,black 98%,transparent); mask-image:linear-gradient(to bottom,transparent,black 2%,black 98%,transparent); }
+      .profile-layout .profile-intro { margin-bottom:30px; }
+      @media(min-width:851px) and (max-width:1080px) { .home-identity{gap:17px}.home-identity .portrait{width:120px;height:120px}.hero .identity-copy h1{font-size:33px}.hero > div:first-child{padding:40px 25px} }
+      @media(max-width:700px) { .profile-layout{grid-template-columns:1fr;gap:28px}.profile-layout .portrait{grid-row:1;width:180px;height:240px} }
+      @media(max-width:560px) { .home-identity{gap:16px}.home-identity .portrait{width:106px;height:106px}.hero .identity-copy h1{font-size:32px;margin-bottom:13px}.home-identity .eyebrow{font-size:8px}.hero > div:first-child{padding:38px 20px} }
   </style>
 </head>
 <body>
@@ -253,8 +270,7 @@
     <div class="wrap" id="top">
       <div class="hero" id="home-panel">
         <div>
-          <div class="eyebrow">Graduate researcher · National Taiwan University</div>
-          <h1>Chih-Yu Maggie Jao</h1>
+          <div class="home-identity"><figure class="portrait"><img src="portrait-clean.png" alt="Chih-Yu Maggie Jao in a snowy city landscape" width="1086" height="1448"></figure><div class="identity-copy"><h1>Chih-Yu<br>Maggie Jao</h1><div class="eyebrow">Graduate researcher<br>National Taiwan University</div></div></div>
           <div class="actions">
             <button class="button primary" type="button" data-view="about">About me</button>
             <button class="button" type="button" data-view="research">Research</button>
@@ -276,11 +292,11 @@
         <section class="subsection" aria-labelledby="profile-title">
           <h3 class="subsection-title" id="profile-title">01 / Profile</h3>
           <div class="subsection-content">
-            <p class="profile-intro">I am an M.S. student in Social Psychology at National Taiwan University. My work brings together behavioral experiments and computational approaches to social interaction.</p>
+            <div class="profile-layout"><div><p class="profile-intro">I am an M.S. student in Social Psychology at National Taiwan University. My work brings together behavioral experiments and computational approaches to social interaction.</p>
             <ul class="timeline" aria-label="Education timeline">
               <li><time datetime="2028">Expected 2028</time><div><strong>M.S. program in Psychology, Social Psychology</strong><span>National Taiwan University</span></div></li>
               <li><time datetime="2025">2025</time><div><strong>B.S. in Life Science</strong><span>National Taiwan University</span></div></li>
-            </ul>
+            </ul></div><figure class="portrait"><img src="portrait-clean.png" alt="Chih-Yu Maggie Jao in a snowy city landscape" width="1086" height="1448"></figure></div>
           </div>
         </section>
         <section class="subsection" aria-labelledby="awards-title">
