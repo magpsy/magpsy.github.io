@@ -255,6 +255,8 @@
       @media(max-width:560px) { .home-identity{gap:16px;justify-content:space-between}.home-identity .portrait{width:96px;height:96px}.hero .identity-copy h1{font-size:27px;margin-bottom:13px}.home-identity .eyebrow{font-size:8px}.hero > div:first-child{padding:38px 20px} }
       section.content-section { scroll-margin-top:100px; }
       @media(max-width:560px) { section.content-section { scroll-margin-top:150px; } }
+  .lens-stage { margin-bottom:10px; }
+      .lens-caption { margin:0 0 22px; color:#c1d1d5; font-size:12px; line-height:1.6; text-align:center; }
   </style>
 </head>
 <body>
@@ -284,10 +286,11 @@
           </div>
         </div>
         <aside class="research-explorer" aria-label="Explore research interests">
-  <div class="explorer-label">Choose a research lens</div>
-  <div class="lens-tabs" role="tablist" aria-label="Research interests"><button class="lens-tab" type="button" role="tab" id="lens-tab-0" aria-controls="lens-panel-0" aria-selected="true" tabindex="0" data-lens="0">Neuroscience</button><button class="lens-tab" type="button" role="tab" id="lens-tab-1" aria-controls="lens-panel-1" aria-selected="false" tabindex="-1" data-lens="1">Alignment</button><button class="lens-tab" type="button" role="tab" id="lens-tab-2" aria-controls="lens-panel-2" aria-selected="false" tabindex="-1" data-lens="2">Language</button></div>
-  <div class="lens-stage" data-lens="0" aria-hidden="true"><i class="lens-orbit"></i><i class="lens-orbit"></i><i class="lens-orbit"></i></div>
-  <div class="lens-panels"><section class="lens-panel" role="tabpanel" id="lens-panel-0" aria-labelledby="lens-tab-0" tabindex="0" ><h2>Computational social neuroscience</h2><p>Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-1" aria-labelledby="lens-tab-1" tabindex="0" hidden><h2>Social alignment</h2><p>Using behavioral studies to examine how social interactions shape alignment.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-2" aria-labelledby="lens-tab-2" tabindex="0" hidden><h2>Natural language processing</h2><p>Exploring human–LLM alignment in the context of social interaction.</p></section></div>
+  <div class="explorer-label">Explore my research interests</div>
+  <div class="lens-tabs" role="tablist" aria-label="Research interests"><button class="lens-tab" type="button" role="tab" id="lens-tab-1" aria-controls="lens-panel-1" aria-selected="true" tabindex="0" data-lens="1">Alignment</button><button class="lens-tab" type="button" role="tab" id="lens-tab-2" aria-controls="lens-panel-2" aria-selected="false" tabindex="-1" data-lens="2">Language</button><button class="lens-tab" type="button" role="tab" id="lens-tab-0" aria-controls="lens-panel-0" aria-selected="false" tabindex="-1" data-lens="0">Neuroscience</button></div>
+  <div class="lens-stage" data-lens="1" aria-hidden="true"><i class="lens-orbit"></i><i class="lens-orbit"></i><i class="lens-orbit"></i></div>
+  <p class="lens-caption">Connecting minds, language, and brains.</p>
+  <div class="lens-panels"><section class="lens-panel" role="tabpanel" id="lens-panel-0" aria-labelledby="lens-tab-0" tabindex="0" hidden><h2>Computational social neuroscience</h2><p>Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-1" aria-labelledby="lens-tab-1" tabindex="0"><h2>Social alignment</h2><p>Using behavioral studies to examine how social interactions shape alignment.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-2" aria-labelledby="lens-tab-2" tabindex="0" hidden><h2>Natural language processing</h2><p>Exploring human–LLM alignment in the context of social interaction.</p></section></div>
   <button type="button" class="explorer-link" data-view="research"><span>Explore research &amp; presentations</span><span aria-hidden="true">→</span></button>
 </aside>
 </div>
@@ -404,7 +407,7 @@
         tab.tabIndex = selected ? 0 : -1;
         document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
       });
-      document.querySelector('.lens-stage').dataset.lens = String(index);
+      document.querySelector('.lens-stage').dataset.lens = lensTabs[index].dataset.lens;
       if (moveFocus) lensTabs[index].focus();
     }
     lensTabs.forEach((tab, index) => {
