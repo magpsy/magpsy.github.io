@@ -124,9 +124,9 @@
     .lens-tab[aria-selected="true"] { background:#c5dbd6; color:#172a45; border-color:#c5dbd6; }
     .lens-stage { position:relative; height:125px; overflow:hidden; margin:4px 0 22px; border-block:1px solid #405970; }
     .lens-orbit { position:absolute; width:82px; height:82px; top:20px; left:calc(50% - 41px); border:1.5px solid #aac7c6; border-radius:50%; transition:transform .55s ease,border-radius .55s ease,background .55s ease; }
-    .lens-orbit:nth-child(1) { transform:translateX(-78px); }
+    .lens-orbit:nth-child(1) { transform:translateX(-54px); }
     .lens-orbit:nth-child(2) { border-color:#d5b9a2; }
-    .lens-orbit:nth-child(3) { transform:translateX(78px); }
+    .lens-orbit:nth-child(3) { transform:translateX(54px); }
     .lens-stage[data-lens="1"] .lens-orbit:nth-child(1) { transform:translateX(-28px); background:#8bb5b31a; }
     .lens-stage[data-lens="1"] .lens-orbit:nth-child(2) { transform:translateX(0); background:#d5b9a21a; }
     .lens-stage[data-lens="1"] .lens-orbit:nth-child(3) { transform:translateX(28px); background:#8bb5b31a; }
@@ -300,8 +300,8 @@
   <div class="explorer-label">Explore my research interests</div>
   <div class="lens-tabs" role="tablist" aria-label="Research interests"><button class="lens-tab" type="button" role="tab" id="lens-tab-1" aria-controls="lens-panel-1" aria-selected="true" tabindex="0" data-lens="1">Alignment</button><button class="lens-tab" type="button" role="tab" id="lens-tab-2" aria-controls="lens-panel-2" aria-selected="false" tabindex="-1" data-lens="2">Language</button><button class="lens-tab" type="button" role="tab" id="lens-tab-0" aria-controls="lens-panel-0" aria-selected="false" tabindex="-1" data-lens="0">Neuroscience</button></div>
   <div class="lens-stage" data-lens="1" aria-hidden="true"><i class="lens-orbit"></i><i class="lens-orbit"></i><i class="lens-orbit"></i></div>
-  <p class="lens-caption">Connecting minds, language, and brains.</p>
-  <div class="lens-panels"><section class="lens-panel" role="tabpanel" id="lens-panel-0" aria-labelledby="lens-tab-0" tabindex="0" hidden><h2>Computational social neuroscience</h2><p>Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-1" aria-labelledby="lens-tab-1" tabindex="0"><h2>Social alignment</h2><p>How shared experiences align emotions, views, and understanding.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-2" aria-labelledby="lens-tab-2" tabindex="0" hidden><h2>Natural language processing</h2><p>Language, shared understanding, and human–LLM alignment.</p></section></div>
+
+  <div class="lens-panels"><section class="lens-panel" role="tabpanel" id="lens-panel-0" aria-labelledby="lens-tab-0" tabindex="0" hidden><h2>Computational social neuroscience</h2><p>Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-1" aria-labelledby="lens-tab-1" tabindex="0"><h2>Social alignment</h2><p>Investigating how shared experiences and social interactions align emotions, perspectives, and understanding.</p></section><section class="lens-panel" role="tabpanel" id="lens-panel-2" aria-labelledby="lens-tab-2" tabindex="0" hidden><h2>Natural language processing</h2><p>Using computational methods to examine shared understanding in language and alignment between humans and LLMs.</p></section></div>
   <button type="button" class="explorer-link" data-view="research"><span>Explore research &amp; presentations</span><span aria-hidden="true">→</span></button>
 </aside>
 </div>
@@ -333,9 +333,9 @@
         <section class="subsection" aria-labelledby="interests-title">
           <h3 class="subsection-title" id="interests-title">01 / Research interests</h3>
           <div class="subsection-content research-grid">
+            <article class="research-card"><h4>Social alignment</h4><p>Investigating how shared experiences and social interactions align emotions, perspectives, and understanding.</p></article>
+            <article class="research-card"><h4>Natural language processing</h4><p>Using computational methods to examine shared understanding in language and alignment between humans and LLMs.</p></article>
             <article class="research-card"><h4>Computational social neuroscience</h4><p>Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences.</p></article>
-            <article class="research-card"><h4>Social alignment</h4><p>How shared experiences align emotions, views, and understanding.</p></article>
-            <article class="research-card"><h4>Natural language processing</h4><p>Language, shared understanding, and human–LLM alignment.</p></article>
           </div>
         </section>
         <section class="subsection" aria-labelledby="publications-title">
@@ -450,6 +450,7 @@
 </script>
 </body>
 </html>
+
 
 
 
