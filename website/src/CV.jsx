@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 const base = "https://magpsy.github.io/CV-public/";
-const resolver = base + "current-cv.js";
+const resolver = base + "current-cv.js?v=manifest1";
 
 export default function CV() {
   const [edition, setEdition] = useState({
-    pdf: base + "CV-OnePage.pdf?v=20261118",
-    image: base + "CV-OnePage-page-1.png?v=20261118"
+    pdf: base + "CV-OnePage.pdf?v=f0cf153ee8d7",
+    image: base + "CV-OnePage-page-1.png?v=f0cf153ee8d7"
   });
 
   useEffect(() => {
