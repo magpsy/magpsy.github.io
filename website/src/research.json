@@ -1,0 +1,54 @@
+{
+  "interests": [
+    {
+      "label": "Alignment",
+      "id": "1",
+      "title": "Social alignment",
+      "description": "Investigating how shared experiences shape alignment in emotions, perspectives, and understanding."
+    },
+    {
+      "label": "Language",
+      "id": "2",
+      "title": "Natural language processing",
+      "description": "Studying shared understanding through language and alignment between humans and LLMs."
+    },
+    {
+      "label": "Neuroscience",
+      "id": "0",
+      "title": "Computational social neuroscience",
+      "description": "Designing behavioral and neuroimaging studies to examine mental alignment during shared experiences."
+    }
+  ],
+  "presentations": [
+    {
+      "year": "2026",
+      "title": "Simultaneous collection of multimodal measures reveals unique facets of affective experience",
+      "venue": "Association for Psychological Science Annual Convention · Barcelona, Spain",
+      "citation": "Chen, P.-H. A., Chou, F.-C. B., Wang, T.-R. H., & Jao, C.-Y. M. · Association for Psychological Science Annual Convention · Barcelona, Spain"
+    },
+    {
+      "year": "2025",
+      "title": "Using heart rate dynamics to examine emotional adaptation during prolonged naturalistic video watching",
+      "venue": "Oral presentation, Taiwanese Psychological Association Annual Conference · Tainan, Taiwan",
+      "citation": "Chen, P.-F. J., Chou, F.-C. B., Jao, C.-Y. M., Wang, T.-R. H., Wang, S.-C. T., & Chen, P.-H. A. · Oral presentation, Taiwanese Psychological Association Annual Conference · Tainan, Taiwan"
+    },
+    {
+      "year": "2024",
+      "title": "Investigating the self-monitoring effect on brain representations of food cues with an ISRSA approach",
+      "venue": "Symposium presentation, Taiwanese Psychological Association Annual Conference · Taipei, Taiwan",
+      "citation": "Jao, C.-Y. M., Chou, F.-C. B., & Chen, P.-H. A. · Symposium presentation, Taiwanese Psychological Association Annual Conference · Taipei, Taiwan"
+    },
+    {
+      "year": "2024",
+      "title": "Unveiling affective experience during naturalistic viewing through spontaneous facial dynamics",
+      "venue": "Social & Affective Neuroscience Society Annual Conference · Toronto, Canada",
+      "citation": "Chen, Y.-C. C., Chou, F.-C. B., Jao, C.-Y. M., Chang, C.-Y. E., Liu, Y.-W. J., Chiu, T.-A. P., & Chen, P.-H. A. · Social & Affective Neuroscience Society Annual Conference · Toronto, Canada"
+    },
+    {
+      "year": "2023",
+      "title": "Conversations between friends and strangers",
+      "venue": "NTU Neurobiology and Cognitive Science Center Summer Internship Conference · Taipei, Taiwan",
+      "citation": "Jao, C.-Y. M., Chou, F.-C. B., & Chen, P.-H. A. · NTU Neurobiology and Cognitive Science Center Summer Internship Conference · Taipei, Taiwan"
+    }
+  ]
+}
