@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const base = "https://magpsy.github.io/CV-public/";
+const resolver = base + "current-cv.js";
 
 export default function CV() {
+  const [edition, setEdition] = useState({
+    pdf: base + "CV-OnePage.pdf?v=20261118",
+    image: base + "CV-OnePage-page-1.png?v=20261118"
+  });
+
+  useEffect(() => {
+    let active = true;
+    import(/* @vite-ignore */ resolver)
+      .then(({ currentCV }) => currentCV())
+      .then(files => { if (active) setEdition(files); })
+      .catch(() => {});
+    return () => { active = false; };
+  }, []);
+
   return (
-<section aria-labelledby="cv-title" className="content-section" id="cv">
-<div className="cv-toolbar">
-<h2 id="cv-title">CV</h2>
-<a className="button" download="Chih-Yu-Maggie-Jao-CV.pdf" href="https://magpsy.github.io/CV-public/CV-OnePage.pdf?v=20261104-r3">Download PDF</a>
-</div>
-<img alt="Chih-Yu Maggie Jao's one-page CV: education, research experience, research interests and languages, conference presentations, and awards." className="cv-preview" src="https://magpsy.github.io/CV-public/CV-OnePage-page-1.png?v=20261104-r3" id="cv-preview"/>
-</section>
+    <section aria-labelledby="cv-title" className="content-section" id="cv">
+      <div className="cv-toolbar">
+        <h2 id="cv-title">CV</h2>
+        <a className="button" download="Chih-Yu-Maggie-Jao-CV.pdf" href={edition.pdf}>Download PDF</a>
+      </div>
+      <img alt="Chih-Yu Maggie Jao's one-page CV: education, research experience, selected research outputs, leadership, languages and interests." className="cv-preview" src={edition.image} id="cv-preview" />
+    </section>
   );
 }
